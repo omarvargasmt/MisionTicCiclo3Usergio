@@ -11,11 +11,11 @@ function loadDoc() {
 
         var tabla = "<table border='1'" +
             "<tr>"+
-            "<th>id</th>" +
-            "<th>name</th>" +
-            "<th>brand</th>" +
-            "<th>model</th>" +
-            "<th>category_id</th>" +
+            "<th>Identificación</th>" +
+            "<th>Nombre</th>" +
+            "<th>Marca</th>" +
+            "<th>Modelo</th>" +
+            "<th>ID_Categoria</th>" +
             "</tr>"
 
         for (var i =0; i < longitud; i++) {
