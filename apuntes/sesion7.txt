@@ -1,0 +1,40 @@
+¿Qué es el look & feel?
+En términos simples, el look and feel de una página es la apariencia del sitio y lo que siente el usuario cuando interactúa con él. 
+El aspecto (look) que va a tener tu sitio y la sensación (feel) que va a proyectar en el usuario 
+son dos cuestiones fundamentales a la hora de pensar el nuevo diseño de tu página.
+
+jQuery Code Snippets
+Live Server
+Arbol DOM (Document Object Model)
+CSS OM (CSS Objetct Model)
+
+PETICIONES ASINCRONICAS CON AJAX 
+AJAX (Asynchronous JavaScript and XML) se refiere a un grupo de tecnologías que se utilizan para desarrollar aplicaciones web.
+Permite actualizar secciones de una página sin recargarla en su totalidad
+TUTORIAL AJAX: https://www.hostinger.mx/tutoriales/que-es-ajax
+
+
+CONTROLAR APP WEB CON JAVASCRIPT
+https://getbootstrap.com/docs/5.1/examples/checkout/
+Con JavaScript podemos manipular el arbol DOM accediendo a sus elementos 
+for(i=0;i<collection.length;i++){};
+
+
+<!Configurar ventana emergente>
+alert ("Hola buenos días este es un mensaje de prueba") 
+
+<!Definición de variables>
+var nombre_variable 
+
+<!-Acceder a funciones de referencia del Arbol DOM->
+
+document.getElementById(): <!Obtiene un elemento por su ID>
+
+var elemento = document.getElementById("firstName")
+elemento.value="info en la caja de texto" <!Insertar texto al objeto>
+elemento.style.display = "none" <!Ocultar objeto>
+elemento.style.display = "block" <!Mostrar objeto>
+
+
+document.getElementsByClassName(): <!Retorna un arreglo (realmente es un HTMLCollection) con todos los resultados coincidentes por su clase>
+document.getElementsByTagName(): <!Retorna un arreglo (realmente es un HTMLCollection) con todos los resultados coincidentes por el nombre de su equiqueta>
