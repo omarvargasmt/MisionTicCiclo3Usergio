@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Omar Vargas">
+        <script src="js/misfunciones.js"></script>
+		<title>Invocando Peticiones HTTP</title>
+	</head>
+
+	<body>
+        <h1>Invocando a un ws mediante ajax y el objeto XMLHttpRequest</h1>
+        <a href="index.html"><img src="src/back.png" alt="Regresar" width="50" height="50"></a>
+        <h2>
+            Al hacer click sobre el botón se invocará la función loadDoc,
+            esta crea un objeto XMLHttpRequest, envía una pétición asincronica (ajax)
+            a un servicio web, y cuando recibe respuesta procesa los datos 
+            recibidos y construye una tabla html con los resultados.
+        </h2>
+        <button type="button" onclick="loadDoc()">Listar...</button>
+        <br><br>
+        <div id="demo"></div>
+	</body>
+</html>
