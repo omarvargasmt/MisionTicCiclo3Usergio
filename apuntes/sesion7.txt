@@ -13,6 +13,33 @@ AJAX (Asynchronous JavaScript and XML) se refiere a un grupo de tecnologías que
 Permite actualizar secciones de una página sin recargarla en su totalidad
 TUTORIAL AJAX: https://www.hostinger.mx/tutoriales/que-es-ajax
 
+function nombreFuncion() {  
+    $.ajax({
+
+        url : 'api/servicio', La URL para la petición
+        data : { id : 123 }, La información a enviar
+        type : 'GET', Especifica el tipo de petición HTTP(GET, POST, PUT o DELETE)
+        dataType : 'json', El tipo de información que se espera obtener como respuesta
+        contentType: "application/json", Tipo de encabezado de la respuesta que se espera obtener
+
+        // código a ejecutar si la petición es satisfactoria;
+        success : function(respuesta) {
+            console.log(respuesta); //Esta instrucción permite ver en la consola del navegador la información contenida en respuesta.
+            pintarRespuesta(respuesta.items);
+        },
+
+        // código a ejecutar si la petición falla;
+        error : function(xhr, status) {
+            alert('Ha sucedido un problema');
+        },
+        
+        // código a ejecutar sin importar si la petición falla o no
+        complete : function(xhr, status) {
+            alert('Ejecutando petición');
+        }
+    });
+}
+
 
 CONTROLAR APP WEB CON JAVASCRIPT
 https://getbootstrap.com/docs/5.1/examples/checkout/
