@@ -38,3 +38,8 @@ elemento.style.display = "block" <!Mostrar objeto>
 
 document.getElementsByClassName(): <!Retorna un arreglo (realmente es un HTMLCollection) con todos los resultados coincidentes por su clase>
 document.getElementsByTagName(): <!Retorna un arreglo (realmente es un HTMLCollection) con todos los resultados coincidentes por el nombre de su equiqueta>
+
+
+JQUERY
+JQuery CDN: Es un método para incluir jQuery en un sitio web sin tener que descargarlo y guardarlo en la carpeta del sitio web. 
+Hay muchos CDN de jQuery, ejemplos: Google, Microsoft, Beluga CDN, CDN propio de jQuery, etc.

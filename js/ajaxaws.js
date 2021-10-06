@@ -9,6 +9,7 @@ function loadDoc() {
         const datos = JSON.parse(this.responseText);
         const longitud = datos.items.length;
 
+        //Definir el encabezado de la tabla
         var tabla = "<table border='1'" +
             "<tr>"+
             "<th>Identificación</th>" +
@@ -18,6 +19,7 @@ function loadDoc() {
             "<th>ID_Categoria</th>" +
             "</tr>"
 
+        //Recorrer los elementos del arreglo y retornarlos en la tabla
         for (var i =0; i < longitud; i++) {
             tabla = tabla + "<tr>"+
             "<th>" + datos.items[i].id + "</th>" +
