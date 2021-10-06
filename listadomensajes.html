@@ -15,9 +15,12 @@
     <script src="js/editarmensajes.js"></script>
     <script src="js/borrarmensajes.js"></script>
     <script src="js/funcionesmensajes.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/table.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/button.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/image.css" media="screen" />
 </head>
 
-<body>
+<body background="img/Fondo_Disfraces.png">
     <div>
         <h1>Mensajes Disponibles</h1>
 
@@ -26,9 +29,9 @@
         -->
         <div id="mensajes"></div>
         <br>
-        <a href="index.html"><img src="img/back.png" alt="Regresar" width="50" height="50"></a>
+        <a href="index.html"><img class="zoom" src="img/back.png" alt="Regresar" width="50" height="50"></a>
         
-        <button id="nuevoRegistro" onclick="activaNuevo();">Registrar Mensaje</button>
+        <button id="nuevoRegistro" onclick="activaNuevo();" class="boton">Registrar Mensaje</button>
         <!--aqui se actualizara el listado -->
         <div id="listado"></div>
 
@@ -39,8 +42,8 @@
             <br>
             <textarea id="messagetext" placeholder="messagetext" rows="4" cols="50"></textarea>
             <br>
-            <button onclick="registrar();">Guardar</button>
-            <button onclick="estadoInicial();">Cancelar</button>
+            <button onclick="registrar();" class="boton">Guardar</button>
+            <button onclick="estadoInicial();" class="boton">Cancelar</button>
         </div>
 
 
@@ -51,8 +54,8 @@
             <br>
             <textarea id="messagetextEdit" placeholder="messagetext" rows="4" cols="50"></textarea>
             <br>
-            <button onclick="actualizar();">Guardar</button>
-            <button onclick="estadoInicial();">Cancelar</button>
+            <button onclick="actualizar();" class="boton">Guardar</button>
+            <button onclick="estadoInicial();" class="boton">Cancelar</button>
         </div>
         
     </div>

@@ -15,9 +15,12 @@
     <script src="js/editar.js"></script>
     <script src="js/borrar.js"></script>
     <script src="js/funciones.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/table.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/button.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/image.css" media="screen" />
 </head>
 
-<body>
+<body background="img/Fondo_Disfraces.png">
     <div>
         <h1>Disfraces Disponibles</h1>
 
@@ -26,9 +29,9 @@
         -->
         <div id="mensajes"></div>
         <br>
-        <a href="index.html"><img src="img/back.png" alt="Regresar" width="50" height="50"></a>
+        <a href="index.html"><img class="zoom" src="img/back.png" alt="Regresar" width="50" height="50"></a>
         
-        <button id="nuevoRegistro" onclick="activaNuevo();">Registrar Disfraz</button>
+        <button id="nuevoRegistro" onclick="activaNuevo();" class="boton">Registrar Disfraz</button>
         
         <!--aqui se actualizara el listado -->
         <div id="listado"></div>
@@ -37,26 +40,26 @@
         <!-- Seccion para nuevos registros-->
         <div id="nuevo">
             <h3>Registrar Disfraz</h3>
-            <input type="number" id="id" placeholder="identificacion">
+            <input type="number" id="id" placeholder="id_disfraz">
             <input type="text" id="name" placeholder="nombre">
             <input type="text" id="brand" placeholder="marca">
             <input type="number" id="model" placeholder="modelo">
             <input type="number" id="category" placeholder="id_categoria">
-            <button onclick="registrar();">Guardar</button>
-            <button onclick="estadoInicial();">Cancelar</button>
+            <button onclick="registrar();" class="boton">Guardar</button>
+            <button onclick="estadoInicial();" class="boton">Cancelar</button>
         </div>
 
 
         <!-- Seccion para editar registros-->
         <div id="editar">
             <h3>Editar Disfraz</h3>
-            <input type="number" id="id" placeholder="identificacion">
-            <input type="text" id="name" placeholder="nombre">
-            <input type="text" id="brand" placeholder="marca">
-            <input type="number" id="model" placeholder="modelo">
-            <input type="number" id="category" placeholder="id_categoria">
-            <button onclick="actualizar();">Guardar</button>
-            <button onclick="estadoInicial();">Cancelar</button>
+            <input type="number" id="idEdit" placeholder="id_disfraz">
+            <input type="text" id="nameEdit" placeholder="nombre">
+            <input type="text" id="brandEdit" placeholder="marca">
+            <input type="number" id="modelEdit" placeholder="modelo">
+            <input type="number" id="categoryEdit" placeholder="id_categoria">
+            <button onclick="actualizar();" class="boton">Guardar</button>
+            <button onclick="estadoInicial();" class="boton">Cancelar</button>
         </div>
         
     </div>

@@ -80,8 +80,8 @@ function listarRespuesta(items) {
                     <td>${items[i].model}</td>
                     <td>${items[i].category_id}</td>
                     <td>${items[i].name}</td>
-                    <td><button onclick="editarRegistro(${items[i].id})">Editar</button></td>
-                    <td><button onclick="borrarRegistro(${items[i].id})">Borrar</button></td>
+                    <td><button onclick="editarRegistro(${items[i].id})" class="buttonTable">Editar</button></td>
+                    <td><button onclick="borrarRegistro(${items[i].id})" class="buttonTable">Borrar</button></td>
                     </tr>`;
     }
 

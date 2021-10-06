@@ -1,0 +1,16 @@
+.boton{
+    font-size:12px;
+    font-family:Verdana,Helvetica;
+    font-weight:bold;
+    color:white;
+    background:#638cb5;
+    border:0px;
+    width:180px;
+    height:28px;
+}
+
+button:hover{
+    color: #fff;
+    background-color: rgb(51, 224, 255);
+    border-color: #fff;
+    }
