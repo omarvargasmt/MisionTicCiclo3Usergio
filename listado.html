@@ -29,17 +29,19 @@
         <a href="index.html"><img src="img/back.png" alt="Regresar" width="50" height="50"></a>
         
         <button id="nuevoRegistro" onclick="activaNuevo();">Registrar Disfraz</button>
+        
         <!--aqui se actualizara el listado -->
         <div id="listado"></div>
+
 
         <!-- Seccion para nuevos registros-->
         <div id="nuevo">
             <h3>Registrar Disfraz</h3>
-            <input type="number" id="id" placeholder="id">
-            <input type="text" id="name" placeholder="name">
-            <input type="text" id="brand" placeholder="brand">
-            <input type="number" id="model" placeholder="model">
-            <input type="number" id="category" placeholder="category_id">
+            <input type="number" id="id" placeholder="identificacion">
+            <input type="text" id="name" placeholder="nombre">
+            <input type="text" id="brand" placeholder="marca">
+            <input type="number" id="model" placeholder="modelo">
+            <input type="number" id="category" placeholder="id_categoria">
             <button onclick="registrar();">Guardar</button>
             <button onclick="estadoInicial();">Cancelar</button>
         </div>
@@ -48,11 +50,11 @@
         <!-- Seccion para editar registros-->
         <div id="editar">
             <h3>Editar Disfraz</h3>
-            <input type="number" id="idEdit" placeholder="id">
-            <input type="text" id="nameEdit" placeholder="name">
-            <input type="text" id="brandEdit" placeholder="brand">
-            <input type="number" id="modelEdit" placeholder="model">
-            <input type="number" id="categoryEdit" placeholder="category_id">
+            <input type="number" id="id" placeholder="identificacion">
+            <input type="text" id="name" placeholder="nombre">
+            <input type="text" id="brand" placeholder="marca">
+            <input type="number" id="model" placeholder="modelo">
+            <input type="number" id="category" placeholder="id_categoria">
             <button onclick="actualizar();">Guardar</button>
             <button onclick="estadoInicial();">Cancelar</button>
         </div>
