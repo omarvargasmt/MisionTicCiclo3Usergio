@@ -12,22 +12,22 @@ function mostrardatos(datos) {
     const longitud = datos.items.length;
     
     var tabla = "<table border='1'>" + 
-                "<tr>" +
-                    "<th>id</th>" +
-                    "<th>name</th>" +
-                    "<th>brand</th>" + 
-                    "<th>model</th>" + 
-                    "<th>category_id</th>" + 
-                "</tr>";
-                
+                    "<tr>" +
+                    "<th>identificacion</th>" +
+                    "<th>nombre</th>" +
+                    "<th>marca</th>" + 
+                    "<th>modelo</th>" + 
+                    "<th>id_categoria</th>" + 
+                    "</tr>";
+                    
     
     for (var i=0; i < longitud; i++) {
         tabla = tabla + "<tr>"+
-                        "<td>" + datos.items[i].id + "</td>" + 
-                        "<td>" + datos.items[i].name + "</td>" + 
-                        "<td>" + datos.items[i].brand  + "</td>" + 
-                        "<td>" + datos.items[i].model  + "</td>" +
-                        "<td>" + datos.items[i].category_id + "</td>" +
+                            "<td>" + datos.items[i].id + "</td>" + 
+                            "<td>" + datos.items[i].name + "</td>" +
+                            "<td>" + datos.items[i].brand  + "</td>" + 
+                            "<td>" + datos.items[i].model  + "</td>" +
+                            "<td>" + datos.items[i].category_id + "</td>" +                            
                         "</tr>";
     }
 
