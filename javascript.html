@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo WS</title>
-    <script src="js/funciones.js"></script>    
+    <script src="js/javascript.js"></script>    
 </head>
 
 <body>
     <div>      
         <h1>Invocando a un servicio web</h1>
-        <a href="index.html"><img src="img/back.png" alt="Regresar"></a>
+        <a href="index.html"><img src="src/back.png" alt="Regresar" width="50" height="50"></a>
         <h2>Este ejemplo muesta la invocación de un servicio web a través
             de javascript.
             No se utiliza la librería jquery, solamente javascript nativo y las
             funciones asincronas tipo: async - await...
         </h2>
         <button type="button" onclick="invocarws().then(mostrardatos);">Listar</button>
-        <br>
+        <br><br>
         <div id="mensaje"></div>
     </div>
 </body>
