@@ -1,0 +1,91 @@
+QUERIE CREACIÓN DE TABLA DE PRUEBAS
+--ORACLE
+CREATE TABLE COSTUME (
+ID NUMBER(10) NOT NULL,
+NAME VARCHAR2(255) NULL,
+BRAND VARCHAR2(45) NULL,
+MODEL NUMBER(10) NULL,
+CATEGORY_ID NUMBER(10) NULL,
+PRIMARY KEY (ID));
+--INSERTS
+INSERT INTO COSTUME (id, name, brand, model, category_id) VALUES (1,'Disfraz de superman para adulto','DC', '2018', '1');
+INSERT INTO COSTUME (id, name, brand, model, category_id) VALUES (2,'Disfraz de Batman para niño', 'DC','2019', '1');
+INSERT INTO COSTUME (id, name, brand, model, category_id) VALUES (3,'Enfermera', 'ColDF', '2021', '2');
+INSERT INTO COSTUME (id, name, brand, model, category_id) VALUES (4,'Disfraz de agente de policía para niño', 'ColDF', '2017', '2');
+INSERT INTO COSTUME (id, name, brand, model, category_id) VALUES (5,'Extraterrestre', 'AliensToys','2021', '3');
+INSERT INTO COSTUME (id, name, brand, model, category_id) VALUES (6,'Marinero', 'ColDF', '2016','2');
+INSERT INTO COSTUME (id, name, brand, model, category_id) VALUES (7,'Extraterrestre Bebé', 'AliensToys', '2021', '3');
+INSERT INTO COSTUME (id, name, brand, model, category_id) VALUES (8,'Lobo Feroz', 'JSCostumes', '2018', '3');
+INSERT INTO COSTUME (id, name, brand, model, category_id) VALUES (9,'Disfraz de pirata cojo con pata de palo y cara de malo', 'JSCostumes', '2020', '2');
+
+
+CREAR MÉTODOS
+La URL será la misma para todos los métodos de la plantilla y solamente con el método GET tendríamos una prueba directa 
+a través del navegador, debido a que toda petición que se haga a través de la barra de direcciones de nuestro navegador, 
+es en sí una petición GET.
+
+Plantilla gastos
+
+Método GET (SELECT):
+SELECT * FROM COSTUME
+
+Método POST (INSERT):
+BEGIN
+INSERT INTO COSTUME (ID,BRAND,MODEL,CATEGORY_ID,NAME)
+VALUES(:identificacion,:marca,:modelo,:id_categoria,:nombre);
+:status_code := 201; 
+END;
+
+Método PUT (UPDATE):
+BEGIN
+UPDATE COSTUME 
+SET 
+BRAND=:marca,
+MODEL=:modelo,
+CATEGORY_ID=:id_categoria, 
+NAME=:nombre 
+WHERE id=:identificacion;
+:status_code := 201;
+END;
+
+Método DELETE (DELETE):
+BEGIN
+DELETE FROM COSTUME WHERE ID=:identificacion;
+:status_code := 204;
+END;
+
+
+Plantilla gastos/:id
+
+Método GET:
+SELECT * FROM COSTUME WHERE ID=:identificacion
+
+
+PROBAR MÉTODOS
+
+Método POST (INSERT):
+{
+    "identificacion": 10,
+    "nombre": "Disfraz de Iron Man para adulto",
+    "marca": "CD",
+    "modelo": 2020,
+    "id_categoria": 3
+}
+
+Método PUT (UPDATE):
+{
+    "identificacion": 9,
+    "nombre": "Disfraz de gato para adulto",
+    "marca": "CD",
+    "modelo": 2020,
+    "id_categoria": 1
+}
+
+Método DELETE (DELETE):
+{
+    "identificacion": 9
+}
+
+
+
+

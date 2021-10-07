@@ -1,0 +1,110 @@
+cd "D:\Usuarios\Omar\Desktop\Universidad Sergio Arboleda\Desarrollo de Software\Source"
+
+>> chmod 400 ssh-key-private.key
+>> chmod 400 ssh-key-2021-10-07.key
+
+Posteriormente para conectarnos a la máquina recién creada, escribiremos lo siguiente
+
+>> ssh -i ssh-key-private.key opc@129.151.123.137
+>> ssh -i ssh-key-2021-10-07.key opc@144.22.56.187
+
+A la pregunta que haga respecto a querer continuar con la conexión, escribiremos la palabra yes
+En este momento estamos autenticados en nuestra máquina a través de un tunel seguro.
+Empezaremos a configurar nuestra máquina y nuestra infraestructura para que este computador
+sea un servidor.
+
+>> sudo yum update
+
+Presionaremos enter y esperaremos un proceso largo en el que la máquina actualizará las
+definiciones y versiones del software que tiene por instalar.
+
+Una vez termine el proceso de actualización de software y de definiciones, procederemos a
+instalar 3 aplicaciones que necesitamos para que nuestro programa pueda ser ejecutado sin
+inconvenientes:
+git, maven y java.
+
+Para instalar git escribiremos el comando
+
+>> sudo yum install git
+
+Para comprobar que hemos hecho la instalación de forma correcta simplemente escribiremos 
+
+>> git --version
+
+A continuación instalaremos Java en su versión 11. Para ello contaremos con OpenJDK.
+La instalación la realizaremos de la siguiente manera:
+
+>> sudo yum install java-11-openjdk-devel
+
+Para validar simplemente escribiremos
+
+>> java -version
+
+y nos mostrará en pantalla que tenemos instalado OpenJDK.
+
+En este momento está todo listo para instalar maven. Para ello ejecutaremos las siguientes instrucciones:
+
+>> sudo yum-config-manager --add-repo http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo
+>> sudo yum-config-manager --enable epel-apache-maven
+>> sudo yum install -y apache-maven
+
+Este proceso instalará maven, pero modificará la versión instalada de java, para ello hemos de corregir el proceso con:
+
+>> sudo alternatives --config java
+>> sudo alternatives --config javac
+
+Al ejecutar cada instrucción nos preguntará cuál es la versión que se quiere utilizar, es probable
+que la correspondiente a OpenJDK versión 11 sea la opción 1. Basta con escribir el número 1 y
+presionar enter para que quede seleccionado.
+
+
+Instalamos Apache Server para probar:
+ sudo apachectl start
+  sudo systemctl enable httpd
+ sudo apachectl configtest
+
+Permitimos el paso por el firewall de la máquina
+  sudo firewall-cmd --permanent --zone=public --add-service=http
+  sudo firewall-cmd --reload
+
+
+Para desplegar nuestra aplicación, el proceso se resumirá en:
+-Descargar la última versión del código fuente a través de git.
+-Compilar el código a través de maven.
+-Ejecutar el archivo jar a través de java
+Para descargar la úlitma versión utilizaremos el comando git clone.
+
+>> git clone url-repositorio
+
+Una vez hecho esto, se inicia la descarga y posteriormente debemos entrar a la carpeta escribiendo
+
+>> cd nombrecarpeta.
+
+Para conocer el nombre de la carpeta, podemos escribir 
+
+>>ls 
+
+Y veremos la lista de carpetas.
+
+
+Una vez hecho esto procedemos a compilar el código.
+
+Para ello escribiremos
+
+>> mvn clean package -DskipTests
+
+El archivo ejecutable se encontrará en la carpeta target.
+Para ello, 
+
+>> cd target.
+
+Para ejecutarlo ejecutamos el siguiente comando
+
+>> sudo java -jar -Dspring.profiles.active=prod archivo.jar
+
+En el comando anterior hemos utilizado sudo para tener permisos de super usuario con el fin de
+poder utilizar el puerto 80 ya que en el archivo de perfil de producción el puerto seleccionado es el
+puerto 80.
+
+
+
