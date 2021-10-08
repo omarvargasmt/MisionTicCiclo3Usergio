@@ -94,13 +94,15 @@ function listarRespuesta(items) {
 
 
 function estadoInicial(){
-    $("#nuevo").hide();
+    $("#nuevo").hide(); // .hide(): Oculta la etiqueta con el id indicado
     $("#editar").hide();
-    $("#listado").show(500);
+    /*.show(500): Muestra la etiqueta con el id indicado, 
+    el número indica la cantidad de milisegundos que tardara en mostrarse*/
+    $("#listado").show(500); 
     $("#nuevoRegistro").show(500)
 
     //limpia el contenido de los campos del formulario nuevo
-    $("#id").val(""),
+    $("#id").val(""), // .val(""): Reemplaza el valor de una etiqueta de texto
     $("#brand").val(""),
     $("#model").val(""),
     $("#category").val(""),
