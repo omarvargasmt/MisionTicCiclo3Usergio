@@ -92,7 +92,6 @@ function listarRespuesta(items) {
     $("#listado").html(tabla);
 }
 
-
 function estadoInicial(){
     $("#nuevo").hide(); // .hide(): Oculta la etiqueta con el id indicado
     $("#editar").hide();
