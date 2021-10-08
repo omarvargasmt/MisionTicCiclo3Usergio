@@ -62,7 +62,7 @@ function validar(){
  * 
  * Ejecuta validaciones campo a campo
  */
- function validarEditar(){
+function validarEditar(){
     //obtiene valores
     let id = $("#idEdit").val();
     let name = $("#nameEdit").val();

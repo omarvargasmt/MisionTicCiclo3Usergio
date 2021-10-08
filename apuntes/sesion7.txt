@@ -57,6 +57,7 @@ var nombre_variable
 
 document.getElementById(): <!Obtiene un elemento por su ID>
 
+
 var elemento = document.getElementById("firstName")
 elemento.value="info en la caja de texto" <!Insertar texto al objeto>
 elemento.style.display = "none" <!Ocultar objeto>
@@ -70,3 +71,7 @@ document.getElementsByTagName(): <!Retorna un arreglo (realmente es un HTMLColle
 JQUERY
 JQuery CDN: Es un método para incluir jQuery en un sitio web sin tener que descargarlo y guardarlo en la carpeta del sitio web. 
 Hay muchos CDN de jQuery, ejemplos: Google, Microsoft, Beluga CDN, CDN propio de jQuery, etc.
+
+
+document.getElementById("mensajes"): <!Obtiene un elemento por su ID>
+$("#mensajes")
